@@ -67,6 +67,7 @@ impl<'a> PlanBuilder<'a> {
                     .into_iter()
                     .map(|err| ServerError {
                         message: err.message,
+                        path: Default::default(),
                         locations: err.locations,
                     })
                     .collect(),
